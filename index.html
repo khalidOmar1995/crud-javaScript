@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="layout/templet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myCookie">
+        <div class="cookieImage" style="background-image: url('https://www.iheartnaptime.net/wp-content/uploads/2017/02/Cake-mix-cookies-I-Heart-Naptime-6-e1543597249573-480x270.jpg');"></div>
+        <h2>cookies consent</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, reprehenderit!</p>
+        <div class="myBtn">
+            <button class="understand" type="button">i understand</button>
+            <button type="button">learn more</button>
+        </div>
+    </div>
+    <div class="fexid-menu d-none">
+        <ul>
+            <li class="accordion" id="accordionExample">
+                <button  type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                </button>          
+                <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                    Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                </div>
+            </li>
+            <li class="accordion" id="accordionExample">
+                <button  type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                    Collapsible Group Item #1
+                </button>          
+                <div id="collapseOne1" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                    Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                </div>
+            </li>
+            <li class="accordion" id="accordionExample">
+                <button  type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                    Collapsible Group Item #1
+                </button>          
+                <div id="collapseOne2" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                    Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                </div>
+            </li>
+            <li class="accordion" id="accordionExample">
+                <button  type="button" data-toggle="collapse" data-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                    Collapsible Group Item #1
+                </button>          
+                <div id="collapseOne4" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                    Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <dir class="myTitle display-4">
+            crud javaScript oop
+        </dir>
+        <form class="row text-center justify-content-center myForm">
+            <div class="col-3">
+                <input type="text" placeholder="name..." class="form-control name">
+            </div>
+            <div class="col-3">
+                <input type="text" placeholder="email..." class="form-control email">
+            </div>
+            <div class="col-3">
+                <input type="text" placeholder="moblie..." class="form-control moblie">
+            </div>
+            <div class="col-12">
+                <input type="submit" id="submit" class="btn btn-success w-75 my-5" value="stor this data">
+                <input type="hidden" id="contEdit" name="">
+            </div>
+        </form>
+        <div class="row">
+            <div style="text-transform: capitalize;" class="col-12 text-center display-4 text-light mt-5"> all employee</div>
+            <div class="col-12">
+                <table class="myTable table rounded text-center text-light table-bordered mt-5">
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>mobile</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        // document.addEventListener('keydown',function(e){
+        //     console.log(e)
+        //     if(event.ctrlKey && event.shiftKey && event.keyCode==73){
+        //         e.preventDefault()
+        //     }
+        //     if(event.ctrlKey && event.keyCode==85){
+        //         e.preventDefault()
+        //     }
+        // });
+
+        let myCookie=document.querySelector('.myCookie')
+        let myBtn = document.querySelector('.myBtn .understand')
+
+        myBtn.addEventListener('click',function(){
+            document.cookie ="cookeisBy=khalid ;max-age" + 60*60*24*30;
+            if(document.cookie){
+                myCookie.classList.add('hide')
+            }else {
+                alert('cookies can not be set')
+            }
+        });
+        
+        let checkCookies= document.cookie.indexOf("cookeisBy=khalid");
+        checkCookies != 1 ?? myCookie.classList.add('hide');
+
+
+
+    </script>
+    <script src="layout/crud.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
